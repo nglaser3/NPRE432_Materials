@@ -57,4 +57,5 @@ def ReadFiles(file_paths,params,max_its=1000):
         fDict['data'] = data
         ret_Dict[vals[0]] = fDict
     print('\nDone :)')
+    print('CSV labels are: ',cols)
     return ret_Dict
