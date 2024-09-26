@@ -61,7 +61,7 @@
 \pagenumbering{arabic}
 
 \section{Abstract}
-
+Hardness, strength, and ductility of materials are all exceedingly important quantities to have an understanding of prior to the usage or deployment of engineering materials. One of the most common ways to test for these values is through a uniaxially loaded stress state, called a tension test. We conducted tension tests on 8 materials to determine these quantities. We investigated Aluminum Alloy 2024, PMMA, Cold Rolled 1018 Steel, 304 Stainless Steel, 1045 Steel (both Cold Rolled and Annealed), Aluminum Alloy 7075, and Bronze. We determined the elastic moduli, yield strengths, ultimate tensile strengths, percent of elongation, modulus of resilience, and hardness values on the Rockwell B scale. We investigated the change of these values as a function of material hardness. Further, we investigated the differences between true and engineering stress/strain, and the applicability of a power-law fit to the plastic deformation region of the true stress/strain curve of 304 Stainless Steel. Lastly, we investigated the effects of plastic deformation on the elastic modulus and yield strength of Bronze. We found that material properties pertaining to strength, elasticity, and ductility vary strongly with hardness. We found true stress is larger than engineering, and true strain is smaller than engineering, and that a power-law fit is well adept to approximating the plastic deformation region of the stress/strain curve for 304 Stainless Steel. Finally, we found that as plastic deformation increases so does the yield strength of the material, conversely the elastic modulus decreases slightly. 
 \newpage
 \section{Introduction}
 An exceedingly common loading condition to test for engineering materials strength and deformation properties is uniaxially. An example of this type of loading condition is a tension or compression test, in which the specimen is loaded and either pulled / compressed until failure or the desired outcome fruitions. These tests measure the stress, the axial force applied to the specimen, and the strain, the dimensional change the specimen undergoes due to loading.
@@ -107,28 +107,28 @@ Various metrics are utilized to quantify the strength and hardness of a material
 where $\sigma_y$ and $E$ are the Yield Strength and Elastic Modulus, respectively. 
 
 \section{Experimental Methods}
-
+To begin, we obtained our various tensile specimens. We gather one tensile specimen for each of the following materials: Aluminum Alloy 2024, PMMA, Cold Rolled 1018 Steel, 304 Stainless Steel, Cold Rolled 1045 Steel, Normalized (Annealed) 1045 Steel, and Aluminum Alloy 7075. For each tensile specimen, except for PMMA and Bronze, we obtained three Rockwell C hardness reading on the grip of the specimen, and recorded the average. Next, we measured the grip and gage diameter of each specimen with a caliper, again three times, and recorded the average. Next, for all specimen, we loaded the specimen into the Instron Load Frame, placed the extensometer on the specimen, and clamped it in. We adjusted the clamps until roughly 90\% of the grip was within the clamp.  We then set the measurement rate to 5mm / min for all materials except PMMA which was set to 1mm / min. We then tested until fracture, except for Bronze in which we cyclically loaded until failure --- relaxed the load applied to the specimen and then revamped the load application two times to have a total of 3 elastic regions. After fracture occurred we measured the fracture diameter three times and recorded the average.
 \newpage
 \section{Results}
 
-\subsection{Question 1}
-To begin, we measured the axial load and engineering strain of 6 materials: 
+To begin, we measured the axial load and engineering strain of 6 materials: Aluminum Alloy 2024, 1018 Cold-Rolled Steel, 304 Stainless Steel, both 1045 Normalized Steel and 1045 Cold-Rolled Steel, and finally Aluminum Alloy 7075. Utilizing Eq. \ref{eq:engstress}, we obtained Fig. \ref{fig:q1all}, engineering stress vs strain. We also measured the axial load and engineering strain for PMMA, and again utilizing Eq. \ref{eq:engstress} we plotted engineering stress and strain in Fig. \ref{fig:q1pmma}.
 \begin{figure}[!h!]
     \centering
-    \includegraphics[width=0.5\linewidth]{plots/q1all.png}
-    \caption{Caption}
+    \includegraphics[width=0.6\linewidth]{plots/q1all.png}
+    \caption{Engineering stress/strain curve of select materials}
     \label{fig:q1all}
 \end{figure}
 
 \begin{figure}[!h!]
     \centering
-    \includegraphics[width=0.5\linewidth]{plots/q1_PMMA.png}
-    \caption{Caption}
+    \includegraphics[width=0.6\linewidth]{plots/q1_PMMA.png}
+    \caption{Engineering stress/strain curve of PMMA}
     \label{fig:q1pmma}
 \end{figure}
 
-\subsection{Question 2}
-
+\newpage
+From the stress-strain curves, and experimentally measured Rockwell-B hardness values (adjusted according to \cite{manual}), we found the Elastic Modulus (Eq. \ref{eq:elasmod}), the Yield Strength (using the 0.2\% Offset method), the UTS, Percent Elongation, and the Modulus of Resilience (Eq. \ref{eq:modresil}). These values are tabulated in Tab. \ref{tab:q2}.
+\vspace{.5cm}
 \begin{table}[!h!]
     \centering
     \def\arraystretch{1.5}
@@ -136,7 +136,7 @@ To begin, we measured the axial load and engineering strain of 6 materials:
     \begin{tabular}{|c|c|c|c|c|c|c|c|}
          \toprule
          \hline
-         \textbf{Material}& \textbf{2024} & \textbf{PMMA} & \textbf{1018CR} & \textbf{304} & \textbf{1045CR} &\textbf{1045NM} & \textbf{304SS}\\
+         \textbf{Material}& \textbf{2024} & \textbf{PMMA} & \textbf{1018CR} & \textbf{304} & \textbf{1045NM} &\textbf{1045CR} & \textbf{7075}\\
          \midrule
          \hline
          \textbf{Elastic Modulus [GPa]}& 71.8 & 3.15 & 204.34 & 670.38 & 203.45 & 220.62 & 66.14 \\
@@ -149,17 +149,16 @@ To begin, we measured the axial load and engineering strain of 6 materials:
     \end{tabular}
     \label{tab:q2}
 \end{table}
+\vspace{.5cm}
 
-
+To continue, we plotted the Elastic Modulus, Yield Strength, the UTS, the Percent Elongation, and Modulus of Resilience as a function of respective material hardness. The resulting Figures are presented in Figs. \ref{figq3:elasmod} - \ref{fig:q3resimod} on the succeeding page. 
 \newpage
-\subsection{Question 3}
-
 \begin{figure}[!h!] 
-  \label{fig:q3} 
   \begin{minipage}[b]{0.5\linewidth}
     \centering
     \includegraphics[width=\linewidth]{plots/q3_E.png} 
     \caption{Elastic Modulus as a function \\  of material hardness} 
+    \label{figq3:elasmod}
     \vspace{4ex}
   \end{minipage}
   \begin{minipage}[b]{0.5\linewidth}
@@ -184,11 +183,12 @@ To begin, we measured the axial load and engineering strain of 6 materials:
       \centering
       \includegraphics[width = .5\linewidth]{plots/q3_resilmod.png}
       \caption{Modulus of Resilience as a function of material hardness}
+      \label{fig:q3resimod}
   \end{minipage}
 \end{figure}
 \newpage
 
-\subsection{Question 4}
+To continue, for specifically the 304 Stainless Steel, we converted from engineering to true stress/strain utilizing Eqs. \ref{eq:trustress} and \ref{eq:trustrain}. We plotted this in conjunction with the engineering stress/strain curve for the sake of comparison. The resulting figure is presented in Fig. \ref{fig:q4evt}.
 \begin{figure}[!h]
     \centering
     \includegraphics[width=0.5\linewidth]{plots/q4_evt.png}
@@ -196,15 +196,18 @@ To begin, we measured the axial load and engineering strain of 6 materials:
     \label{fig:q4evt}
 \end{figure}
 
-\subsection{Question 5}
+From the true stress/strain, we fit the plastic deformation region with a power-law fit, Eq. \ref{eq:powlaw}. To do so, we utilized the \texttt{scipy} python module, specifically \texttt{scipy.optimize.curve\textunderscore fit}. The resulting fit is presented in Fig. \ref{fig:q5fit}. 
+
 \begin{figure}[!h]
     \centering
     \includegraphics[width=0.5\linewidth]{plots/q5_fit.png}
     \caption{Power-Law fit of plastic deformation of 304 Stainless Steel}
     \label{fig:q5fit}
 \end{figure}
+\newpage
 
-\subsection{Question 6}
+Finally, we performed a multi-phase loading test on a Bronze specimen. This multi-phase loading test was a tensile test with cyclical 'de-loading' phases. From this test we found the engineering stress vs strain curve, presented in Fig. \ref{fig:br}. From the resulting stress/strain curve we determined the Elastic Modulus and Yield Strength of each Elastic region, as well as the plastic strain at the beginning of each loading phase. To determine the Yield strength, we again utilized the 0.2\% Offset method, for the phases defining the 0.2\% Offset to be 0.2\% more strain than the minimum strain of that phase. These values are tabulated in \ref{tab:q6}.
+
 \begin{figure}[!h]
     \centering
     \includegraphics[width=0.5\linewidth]{plots/q6_br.png}
@@ -212,11 +215,47 @@ To begin, we measured the axial load and engineering strain of 6 materials:
     \label{fig:br}
 \end{figure}
 
+\begin{table}[!h!]
+    \centering
+    \def\arraystretch{1.5}
+    \caption{Material properties at each loading phase of cyclically loaded Bronze}
+    \vspace{1pt}
+    \begin{tabular}{|c|c|c|c|}
+        \toprule
+        \hline
+        \textbf{Loading Phase} & First & Second & Third \\ 
+        \midrule
+        \hline
+        \textbf{Plastic Strain [\%]} & 0.000 & 1.474 & 7.280 \\
+        \textbf{Elastic Modulus [GPa]} & 52.117 & 55.964 & 46.662\\
+        \textbf{Yield Strength [MPa]} & 292.9 & 321.1 & 367.7\\
+
+        \hline
+    \end{tabular}
+    \label{tab:q6}
+\end{table}
+\newpage
+
 \section{Analysis and Discussion}
+\subsection{Analysis of Results}
+
+To begin, in Tab. \ref{tab:q2} the impact of cold rolling (CR) and annealing or normalizing (NM) is apparent, looking specifically at 1045 Steel. CR drastically increases the Yield Strength , the Modulus of Resilience, and the Rockwell B hardness value; whereas NM has much for elongation occur prior to failure. Unsurprisingly, the UTS between the two specimens are nearly identical. Strangely however, the Young's moduli differ by roughly 10\%. This will be discussed further in the final paragraph of this section. To continue, of the select materials in Tab. \ref{tab:q2} each excels in their own right. 304 Stainless Steel is the hardest and by far most ductile; 7075 absorbs the most elastic energy; and cold rolled 1018 Steel is by far the strongest. 
+
+Due to their strong difference in material properties, Steel and Aluminum alloys have wildly different applications. Steel is a strong candidate for structural components, where strength and resistance to deformation are desired and high stress is common; however Aluminum alloys are poor candidates here due to their relative ease to deform under load. On the flip-side, in components were large amounts of strain are expected, Aluminum alloys are a much better candidate due to their ability to resist plastic deformation. 
+
+To continue, the differences between true and engineering stress-strain curves are exemplified in Fig. \ref{fig:q4evt}. Notably, the true stress is much higher than the engineering, whereas the true strain is much lower than engineering. The true stress is much higher than engineering, because as the specimen begins to fail in a tensile test, necking occurs. Necking is where the portion of the specimen being tested is stretching axially and decreasing in cross-sectional area; roughly keeping the volume constant. Because of this decrease in cross sectional area, the force applied to the specimen might be decreasing but the stress is larger because the area bearing the load is decreasing at a faster rate. 
+
+Proximally, the power law fit obtained and presented in Fig. \ref{fig:q5fit} fits the stress/strain curve somewhat well --- this fit has an $R^2$ value of 0.91933. 
+
+Finally, to discuss the Bronze specimen that underwent cyclical loading. Notably, Young's modulus decreases sharply for the third phase, over a 10\% drop from the first phase. This differs strongly from our in-class theory in which Young's modulus is independent of plastic deformation. This discrepancy is most definitely due to the nature of cold working. Cold working strengthens the material by increases the dislocation density of the material, thus increasing the hardness; but this increase in dislocation density disrupts the elastic movement of the material resulting in a lower Young's modulus at higher plastic deformations. On the contrary, the Yield Strength results are identical to our expected results: as the material goes higher up the stress/strain curve, the strength increases. 
+
+\subsection{Sources of Error}\label{sec:error}
+Throughout the experiments, various sources of error had the opportunity to subjugate our results and lead them astray from our theoretical expectations. Prominent sources of error that permeated through all of our experimental trials were scratching from caliper measurements on the gage and improper loading of specimens into the tensile test apparatus. Scratches on the gage portion of the specimen could, during tension, locally increase stress and potentially propagating as a crack throughout the specimen, effectively reducing both the strength and measured percent elongation. Further, improper loading of the specimens could yield unforeseen errors, such as a disagreeing between measured load applied and actual load applied.  
 
 \newpage
 \section{Conclusions}
-\newpage
+In conclusion, We conducted tension tests on 8 materials to determine various material properties pertaining to strength, elasticity, ductility, and hardness. We investigated Aluminum Alloy 2024, PMMA, Cold Rolled 1018 Steel, 304 Stainless Steel, 1045 Steel (both Cold Rolled and Annealed), and Aluminum Alloy 7075. We determined the elastic moduli, yield strengths, ultimate tensile strengths, percent of elongation, modulus of resilience, and hardness values on the Rockwell B scale. We investigated the change of these values as a function of material hardness. Further, we investigated the differences between true and engineering stress/strain, and the applicability of a power-law fit to the plastic deformation region of the true stress/strain curve of 304 Stainless Steel. Lastly, we investigated the effects of plastic deformation on the elastic modulus and yield strength of Bronze. We found that material properties pertaining to strength, elasticity, and ductility vary strongly with hardness. We found true stress is larger than engineering, and true strain is smaller than engineering, and that a power-law fit is well adept to approximating the plastic deformation region of the stress/strain curve for 304 Stainless Steel. Finally, we found that as plastic deformation increases so does the yield strength of the material, conversely the elastic modulus decreases slightly. 
+
 \section{References}
 \printbibliography[heading=none]
 
