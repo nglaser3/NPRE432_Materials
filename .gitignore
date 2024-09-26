@@ -1,3 +1,9 @@
-.ipynb*
-__pycache__
+*.log
+*.aux
+*.bcf
+*.toc
+*.xml
+*.out
 .DS_Store
+.ipynb_checkpoints
+__pycache__
