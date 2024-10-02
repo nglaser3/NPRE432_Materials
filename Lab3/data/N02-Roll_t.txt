@@ -1,0 +1,6 @@
+Thickness (mm)*I	II	III	IV	V	VI	VII	VIII
+5.60	6.74	7.30	8.44	5.60	6.70	7.21	8.38
+5.00	4.99	5.07	5.05	2.54	2.53	2.53	2.54
+Width at Mark 3 (mm)Mark III (5mm thickness)Initial 	Final19.17
+Mark VII (2.5mm thickness)Initial 	Final19.65
+
