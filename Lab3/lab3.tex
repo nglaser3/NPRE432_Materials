@@ -131,14 +131,58 @@ To continue, we determined the hardness values as a function of Annealing temper
 
 From this figure, we see convergence a lower temperatures, alluding to critical annealing at roughly 375 $^oC$. Thus, the critical homologous temperature is 0.4032. 
 
-Next, a psuedo-mechanism map is presented in Fig. \ref{}.
+Next, a psuedo-mechanism map is presented in Fig. \ref{fig:map}.
+\newpage
 
-\Fig{}{}{}
+\begin{figure}[!h!]
+    \centering
+    \includegraphics[width=1.3\linewidth]{plots/microstruc.png}
+    \caption{Psuedo-Mechanism Map}
+    \label{fig:map}
+\end{figure}
+\newpage
+
+The dotted lines segment, from left to right, the recovery only region (\textbf{I}, recovery and partial recrystallization region\textbf{II}, and recovery with 100\% recrystallization and possible grain growth \textbf{III}. There is a strong correlation between annealing temperature and the time required for recovery as-well as maximal achievable recovery. The dominating regions are defined in Tab. \ref{tab:q4}.
+
+\newcommand{\reg}[1]{Region \textbf{#1}}
+\begin{table}[]
+    \centering
+    \def\arraystretch{1.5}
+    \caption{Cold-Work and Temperature Correlations}
+    \begin{tabular}{|c|c|c|c|c|}
+        \toprule
+        \hline
+         Thickness $\downarrow$ Temperature $\rightarrow$ &  350 & 400 & 450 & 500 \\
+         \midrule
+         \hline
+         2.5 mm & \reg{I} & \reg{II} & \reg{II} & \reg{III}\\
+         5.0 mm & \reg{I} & \reg{II} & \reg{II} & \reg{III}\\
+         \hline
+    \end{tabular}
+    \label{tab:q4}
+\end{table}
+
+The final thickness of the as rolled and annealed specimen were 1.19 mm and 0.92 mm, respectively. Finally, the $CR_{\%}$ of the annealed and as-rolled were determined to be, with Eq. \ref{CRdef}, 85.593 and 88.929 \% respectively.
 
 \section{Analysis and Discussion of Results}
 
-\section{Conclusions}
+To begin with the analysis of our results, we will first look at strong sources of error. Undoubtedly the strongest is the sheer lack of data utilized to justify any of the claims presented in this work. First, in Fig. \ref{fig:q1_all} notably the as-rolled samples are left out of the figure. This is simply due to lack of presentable data (At the time of writing this report, the data was not available; however I acknowledge that the T.A.'s are working to rectify this). Further, we simply did not have enough data point to construct an accurate linear regression for Fig. \ref{fig:q2}, and thus had to assume perfect linearity --- an intercept at the origin. Next, due to the nature of catastrophic failure a precise measurement on the thickness of the failed specimen is not perfectly accurate and was likely subject to uncertainty due to varying thicknesses across the fractures. 
 
+\section{Answers to Questions}
+To begin, there is a clear correlation between hardness and $CW_{\%}$. Each of the four specimen presented a similair correlation --- As the $CW_{\%}$ increases so does hardness. 
+
+Next, there is a strong positive correlation between yield strength and $CW_{\%}$. This is due to the increase is dislocation density caused by plastic deformation occurring during cold work. We estimate the maximum yield strength to be 428.649 MPa and the increase in yield strength to be 16.56 \%.
+
+Proximally, we found an inverse relation between annealing temperature and hardness. This aligns with our expectations as annealing decreases the dislocation density. We determined the critical annealing temperature to be in the neighbourhood of 375 $^oC$, and thus the critical homologous temperature to be 0.4032. 
+
+To continue, we determined a correlation between grain size and hardness. This correlation is simple, the smaller the grain size the harder the material. This makes intuitive sense, as the smaller the grain the higher the surface area to volume ratio is, and thus the higher the dislocation density. 
+
+We investigated the affects of cold-working to failure on an annealed specimen and non-annealed specimen. We determined they failed at close to the same percentage of reduction, with the annealed specimens being compressed further. This entails higher commpressibility factors being achievable when utilizing a phased annealing and compressing methodology, to ensure maximal plastic deformation. 
+
+Finally, when loading the specimen parallel or perpendicular to the rolling plane we would expect roughly equal results. This is simply due to the fact that the grains are still being compressed uniaxially. However, in samples with an equiaxed grain structure we would expect higher elastic moduli and strength, and lower ductility, as with multi-axial rolling the grains would be compressed much more increasing the overall dislocation density. 
+
+\section{Conclusions}
+Hardness, strength, and ductility of materials are all exceedingly important quantities to have an understanding of prior to the usage or deployment of engineering materials. Depending on the application environment, strength and hardness may be a strongly desirable attribute of an engineering material, or the reuse of materials with high rates of plastic deformation may be desirable. In the first case, Cold-Rolling is a common method to improve the strength and hardness of a material, and in the latter case annealing is utilized to revert a material back to its initial structure. To investigate the effects of Cold-Rolling and Annealing on materials, we Cold-Rolled and Annealed Brass. We determined the hardness at various Cold-Rolled percentages, and at totally annealed. Further, we determined the relationship between Cold-Rolling and the Yield Strength of Brass. We determined there is a strong positive correlation between Cold-Rolling and both hardness and Yield Strength. Inversely, we found a strong negative correlation between Annealing (from Cold-Rolled states) and both hardness and strength.
 \section{Bibliography}
 \printbibliography[heading=none]
 
