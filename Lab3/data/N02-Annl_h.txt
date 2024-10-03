@@ -1,2 +1,10 @@
-N02-AnnlProgram:	Brass Hardness(txt)Date: 	Tue, Sep 24, 2024Time: 	12:35 PMName: 	NPRE432-02Annealed at 450CLocations: I	II	III	IV	V	VI	VII	VIII
-
+N02-Annl
+Program:	Brass Hardness(txt)
+Date: 	Tue, Sep 24, 2024
+Time: 	12:35 PM
+
+Name: 	NPRE432-02
+Annealed at 450C
+Locations: 
+I	II	III	IV	V	VI	VII	VIII
+

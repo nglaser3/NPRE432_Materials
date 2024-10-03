@@ -1,0 +1,138 @@
+\documentclass{article}
+
+% Language setting
+% Replace `english' with e.g. `spanish' to change the document language
+\usepackage{biblatex} %Imports biblatex package
+\addbibresource{../Lab2/refs.bib}
+\usepackage{enumitem}
+\usepackage[english]{babel}
+\usepackage{array}
+\usepackage{amsmath}
+\usepackage{pythonhighlight}
+\usepackage{multirow}
+\newcolumntype{P}[1]{>{\centering\arraybackslash}p{#1}}
+\newcolumntype{M}[1]{>{\centering\arraybackslash}m{#1}}
+
+% Set page size and margins
+% Replace `letterpaper' with `a4paper' for UK/EU standard size
+\usepackage[letterpaper,top=2cm,bottom=2cm,left=3cm,right=3cm,marginparwidth=1.75cm]{geometry}
+
+\usepackage{amsmath}
+\usepackage{graphicx}
+\usepackage[colorlinks=true, allcolors=blue]{hyperref}
+\usepackage{setspace}
+\usepackage{booktabs}
+\usepackage[T1]{fontenc}
+\usepackage{longtable}
+\doublespacing
+
+\begin{document}
+\newcommand{\Fig}[3]{\begin{figure}[!h!]\centering\includegraphics[width=0.5\linewidth]{#1}\caption{#2}\label{#3}\end{figure}}
+\begin{titlepage}
+
+\centering
+\scshape
+\vspace{\baselineskip}
+
+%
+\rule{\textwidth}{1.6pt}\vspace*{-\baselineskip}\vspace*{2pt}
+\rule{\textwidth}{0.4pt}
+
+{\Huge \textbf{\textsc{ Cold Work and Annealing \\
+\vspace{15pt}}}}
+
+\rule{\textwidth}{0.4pt}\vspace*{-\baselineskip}\vspace{3.2pt}
+\rule{\textwidth}{1.6pt}\vspace{6pt}
+\centerline{\textit{University of Illinois at Urbana-Champaign}} 
+\centerline{\textit{Department of Nuclear, Plasma, and Radiological Engineering}}
+\vspace{1.5\baselineskip}
+
+
+\large \centerline{\textbf{Author:} Nathan Glaser}
+\large \centerline{\textbf{Net-ID:} nglaser3}
+\quad
+
+\vfill
+\large \centerline{October 2, 2024}
+%
+\pagenumbering{gobble}
+\end{titlepage}
+
+\tableofcontents
+\newpage
+\pagenumbering{arabic}
+ 
+\section{Abstract}
+Hardness, strength, and ductility of materials are all exceedingly important quantities to have an understanding of prior to the usage or deployment of engineering materials. Depending on the application environment, strength and hardness may be a strongly desirable attribute, or the reuse of materials with high rates of plastic deformation may be desirable. In the first case, Cold-Rolling is a common method to improve the strength and hardness of a material, and in the latter case annealing is utilized to revert a material back to its initial structure. Both methods, despite drastically different outcomes, are, in their simplest form, altering the micro structure of the material. To investigate the effects of Cold-Rolling and Annealing on materials, we Cold-Rolled and Annealed Brass. We determined the hardness at various Cold-Rolled percentages, and at totally annealed. Further, we determined the relationship between Cold-Rolling and the Yield Strength of Brass. We determined there is a strong positive correlation between Cold-Rolling and both hardness and Yield Strength. Inversely, we found a strong negative correlation between Annealing (from Cold-Rolled states) and both hardness and strength.
+
+\section{Introduction}
+In this lab we investigate two micro structure altering methods --- Cold-Rolling and Annealing. 
+\subsection{Cold Rolling}
+Cold Rolling, or work hardening, is a common method to harden a material, effectively altering its micro-structure and elongating the grains. These elongated grains have a higher dislocation density compared to more spheroid grains, thus increasing their resistivity to dimensional change. Cold-Rolling or work hardening is completed via plastically deforming the specimen. This plastic deformation greatly increases the local dislocation density. 
+\subsection{Annealing}
+Annealing is the antithetical method to Cold-Rolling, heating up the material to relax the stressed grain boundaries. This process returns the elongated grains back into their spheroid adolescence.  This works by heating the material, thus the atoms near the ground boundaries are much more excited, thus smaller grains will 'leak' atoms into larger grains. 
+
+\section{Theoretical Models}
+
+To begin, the hardness scale we utilized was Rockwell B. To determine the hardness value with this scale, a $1/16^{th}$ inch diameter tungsten indenter is utilized. The indentation diameter left behind by the indenter ,$\delta$, is then divided by the ball's diameter, then subtracted from 130. 
+\begin{equation}
+    R_b = 130 - \frac{\delta}{d_{ind}}
+    \label{rb_def}
+\end{equation}
+
+To continue, a consistent metric we utilize to determine the level of Cold-Rolling enacted upon a specimen is the percent cold work. This is found through simply assuming constant volume throughout plastic deformation. The formulation utilized is:
+\begin{equation}
+    CW_{\%} = 100\cdot\frac{A_o - A_f}{A_o}
+    \label{CWdef}
+\end{equation}
+
+Similarly, Cold -Rolling reduction is defined as:
+
+\begin{equation}
+    CR_{\%} = 100 \cdot \frac{t_o - t_f}{t_o}
+    \label{CRdef}
+\end{equation}
+
+Finally, the last metric utilized to identify material property changes due to Cold-Rolling or Annealing is percent increase in yield strength ($\sigma_{y,\%}$). We define this quantity as:
+
+\begin{equation}
+    \sigma_{y,\%} = 100 \cdot \frac{\sigma_{y,max} - \sigma_{y,o}}{\sigma_{y,o}} 
+    \label{percentyield}
+\end{equation}
+
+\section{Experimental Methods}
+
+We Cold-Rolled 4 brass wedge specimen. The first two specimen will be rolled and consequentially annealed, whereas the final two will simply be rolled. One of each of these groups will be rolled to 2.5 mm, and the other to 5mm thickness. The specimen will be, initially, 5 mm on one side and 9.5 mm on the other side. Each will have 4 lines, henceforth denoted \textbf{I},\textbf{II},\textbf{III},\textbf{IV}, where \textbf{I} is the thinnest initial region and \textbf{IV} is the thickest. All Procedures  detailed in this section were carried out in accordance to the instructions in \cite{manual}.
+
+Each specimen will follow the following procedure, doing either step 4.A or 4.B:
+\begin{itemize}[leftmargin=.75in]
+    \item[\textbf{1.}] Obtain Rockwell B hardness value, measuring at each marked location. This step occurs PRIOR to any externally induced deformation.
+    \item[\textbf{2.}] Pass specimen through rolling mill until desired final thickness is achieved. This thickness is 2.5 or 5 mm depending on the trial. 
+    \item[\textbf{3.}] Obtain Rockwell B hardness value at each marked location and measure the final thickness of the specimen.
+    \item[\textbf{4.A}] One of the 2.5 and 5 mm specimen each are passed through the rolling mill until catastrophic failure. 
+    \item[\textbf{4.B}] One of the 2.5 and 5 mm specimen each are placed in the furnace and heated for one hour, then after cooling hardness values are again determined.
+\end{itemize}
+
+
+\section{Results}
+To begin, we found the Rockwell B hardness values at each location of the 2.5 and 5 mm thickness annealed specimens. We were not able to determine the corresponding data for the as rolled specimens as there was a data translation error and the data was not recorded properly. 
+\Fig{plots/q1_all.png}{Hardness as a function of CW$_{\%}$ for both annealed specimen}{fig:q1_all}
+
+Proximally, the relationship between $CW_{\%}$ and yield strength of brass is determined. From this relationship, we can predict the yield strength corresponding to the maximum achievable $CW_{\%}$. 
+
+\Fig{q2.png}{Linear regression to predict maximum achievable yield strength}{fig:q2}
+
+From this fit, we can simply input the maximum Cold-Work. This maximum, from our experimental trials, would be for the 2.5 mm specimen as rolled. The calculated $CW_{\%}$, Eq. \ref{CWdef}, is 67.116\%. Thus, we determine the maximum yield strength to be 428.649 MPa. From this, we determine the increase in yield strength to be 16.56\%. 
+
+To continue, we determined the hardness values as a function of Annealing temperature. This is presented in Fig. \ref{}.
+
+\Fig{q3.png}{Hardness as a function of Annealing temperature}{fig:hardtemp}
+
+\section{Analysis and Discussion of Results}
+
+\section{Conclusions}
+
+\section{Bibliography}
+\printbibliography[heading=none]
+
+\end{document}
