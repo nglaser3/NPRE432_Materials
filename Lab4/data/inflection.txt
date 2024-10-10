@@ -1,4 +1,6 @@
-*%Bi	1st transition	2nd transition	3rd transition	Note  0	130		
+*
+%Bi	1st transition	2nd transition	3rd transition	Note
+  0	130		
   5			
  10			
  15	228	136	121
