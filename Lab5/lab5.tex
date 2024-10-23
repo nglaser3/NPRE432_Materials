@@ -173,7 +173,18 @@ Next, from these tabulated values we can determine a correlation between the  th
 \end{figure}
 \newpage
 \section{Analysis of Discussion and Results}
-To begin, our true-uncorrected data is rather lugubrious. This is due to mal-practice in loading of specimens, and so many of our trials either began with negative strains or started at 0 and then went negative prior to going positive. To amend these poor results, we chopped off the objectively incorrect data points that were obviously produced from incorrect loading, and then performed our data processing on the resulting datasets. For example, 
+To begin, our true-uncorrected data is rather lugubrious. This is due to mal-practice in loading of specimens, and so many of our trials either began with negative strains or started at 0 and then went negative prior to going positive. To amend these poor results, we chopped off the objectively incorrect data points that were obviously produced from incorrect loading, and then performed our data processing on the resulting datasets. For example, our normalized stress strain curve:
+
+\begin{figure}[!h!]
+    \centering
+    \includegraphics[width=0.5\linewidth]{plots/bs_plot.png}
+    \caption{Normalized Stress-Strain curve, pre-adjusting}
+    \label{fig:bs-plot}
+\end{figure}
+
+To fix this data set, we chopped the initial loading phase from the data set, removing the strong discontinuity. 
+
+To continue, another strong source of error was in finding the Brinnel hardness of the annealed sample. This is due to the invalidity of application of the equation we utilized to convert between Rockwell C and Brinnel for this specimen. Similarly, when determining the toughness of the water quenched sample, because our mechanism in determining yield strength resulted in equivalent fracture point and yield strengths, the numerical integration was invalid. To obtain a non-zero value we integrated from 0 to the fracture point. We recognize this is invalid. 
 
 
 \section{Answer to Questions}
