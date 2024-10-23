@@ -68,9 +68,29 @@
 
 \section{Introduction}
 
+
 \section{Experimental Methods}
 
+
 \section{Theoretical Models}
+To begin, we measured the force applied to a specimen and the resulting strain. To convert these force values to stress, we utilized the following equation:
+
+\begin{equation}
+    \sigma_e = \frac{F}{A_{xs,o}} = \frac{F}{\pi r_{o}^2}
+\end{equation}
+where $A_{xs,o}$ and $r_o$ are the initial cross sectional area and the initial radius of the load bearing section of the specimen, respectively. 
+
+Next, to determine the toughness of a specimen we integrate the stress-strain curve from the yield point to the fracture point with respect to the strain. To perform the integration we utilized the numerical integrator provided by \texttt{numpy}, \texttt{numpy.trapezoid}. 
+\begin{equation}
+    T = \int_{\epsilon_{y}}^{\epsilon_{f}}\sigma_e\left(\epsilon\right)\ d\epsilon
+\end{equation}
+
+Next, because our measured strain values are in mm/mm units, we simply convert these to percent by multiplying by 100, and then we utilize the following equation to determine the percent elongation of the specimen.
+\begin{equation}
+    \%_{e} = \epsilon_{\%,f} -\epsilon_{\%,o}
+\end{equation}
+
+Finally, we measured the hardness utilizing the Rockwell C scale, however we want these reported in terms of the Brinnel scale. To convert from HRC to BHN we utilized the following theoretical equation, \cite{manual}.
 \begin{equation}
     \textbf{H}_{BN} = 131.7 e^{0.0252\:\textbf{H}_{RC}}
     \label{eq:rc2br}
@@ -87,7 +107,7 @@ To begin, we found the engineering stress-strain curves for oil quenched, water 
     \label{fig:q1-all}
 \end{figure}
 
-Next, from Fig. \ref{fig:q1-all} we found the elastic modulus, the yield strength, the ultimate strength, the toughness, percent elongation, and brinnel hardness for each specimen. To not have an overly wide table, the specimen names were abbreviated but follow the same order as in the legend of Fig. \ref{fig:q1-all}. The brinnel hardness values were determined via the conversionary equation, Eq. \ref{eq:rc2br}. The yield strengths were determined via the 0.2 \% offset methodology.
+Next, from Fig. \ref{fig:q1-all} we found the elastic modulus, the yield strength, the ultimate strength, the toughness, percent elongation, and Brinnel hardness for each specimen. To not have an overly wide table, the specimen names were abbreviated but follow the same order as in the legend of Fig. \ref{fig:q1-all}. The Brinnel hardness values were determined via the conversionary equation, Eq. \ref{eq:rc2br}, from our measured HRC values. The yield strengths were determined via the 0.2 \% offset methodology.
 
 \begin{table}[!h!]
     \centering
@@ -95,6 +115,7 @@ Next, from Fig. \ref{fig:q1-all} we found the elastic modulus, the yield strengt
     \caption{Select material properties of each specimen tested}
     \begin{tabular}{|c|c|c|c|c|c|c|}
         \toprule
+        \hline
         \textbf{Material} & \textbf{OQ} & \textbf{Temp. 300} & \textbf{Norm.} & \textbf{Temp. 500} & \textbf{An.} & \textbf{WQ} \\ 
         \midrule
         \hline 
@@ -119,7 +140,7 @@ Next, from these tabulated values we can determine a correlation between the  th
 \begin{figure}[!h!]
     \centering
     \includegraphics[width=0.5\linewidth]{plots/q4.png}
-    \caption{Correlation of $\sigma_{UTS} and HRB$}
+    \caption{Correlation of $\sigma_{UTS}$ to BHN for all specimens}
     \label{fig:q4}
 \end{figure}
 
@@ -152,8 +173,43 @@ Next, from these tabulated values we can determine a correlation between the  th
 \end{figure}
 \newpage
 \section{Analysis of Discussion and Results}
+To begin, our true-uncorrected data is rather lugubrious. This is due to mal-practice in loading of specimens, and so many of our trials either began with negative strains or started at 0 and then went negative prior to going positive. To amend these poor results, we chopped off the objectively incorrect data points that were obviously produced from incorrect loading, and then performed our data processing on the resulting datasets. For example, 
+
 
 \section{Answer to Questions}
+To begin, we found and plotted the engineering stress-strain curves of various heat treatment methods enacted upon 4340 specimens. We investigated basic water quenched, basic oil quenched, annealed, normalized, oil quenched then tempered at 300 $^oC$, and oil quenched then tempered at 500 $^oC$. These curves are presented in Fig. \ref{fig:q1-all}.
+
+Next, we found the elastic modulus, yield strength, ultimate tensile strength, toughness, percent elongation, and brinnel hardness of each aforementioned specimen. These values are tabulated in Tab. \ref{tab:q2}. Various results stand out, namely the yield strength of the water quenched specimen and the hardness of the annealed specimen. For the water quenched specimen, unfortunately when utilizing the 0.2\% offset method to determine the yield strength, the offset linear line never intercepted with the stress-strain curve as the specimen failed prior to significant plastic deformation. Further, the Brinnel hardness value for the Annealed specimen is absurdly high. This is due to the Rockwell hardness being very large ---- 87.9 ---- and outside of the range of validity of our empirically derived conversion equation, Eq. \ref{eq:rc2br}.
+
+Noticeably, the material properties for each specimen are starkly different despite all being 4340. This is due to the affect that heating and cooling have on the microstructure of materials. In 4340, the faster the specimen is cooled the more martensite is present, and the more brittle the specimen is. The strongest specimen, by far, was the standard oil quenched specimen. The hardest was the annealed specimen. The stiffest was the water quenched whereas the most ductile was the annealed specimen. Finally, the toughest was the oil quenched then tempered at 300 $^oC$.
+
+We determined the relationship between the ultimate tensile strength and the Brinnel hardness of each specimen, presented in Fig. \ref{fig:q4}. Our linear regression yielded a less than optimal correlation ---- only 0.588. Despite the poor fit, we do expect an inverse relationship between hardness and ultimate strength. We expect this as the harder a material is, the tougher we expect, and thus the less ductile. This is a gross over-simplification on the relationship between hardness and strength, but is sufficient for comparison's sake. 
+
+The heat treatment that results in potential surface flaws is water quenching. This is due to the rapidity in cooling due to the high thermal conductivity of water. This rapid cooling is so strong and fast that it exerts huge thermal stresses upon the specimen, where portions of the surface experience rapid thermal de-expansion, potentially yielding cracks that can propagate through the material during tensile load. In fact, this was present in our water quenched specimen, where the specimen failed prior to non-negligible plastic deformation. 
+
+Next, we determined the relationships between ultimate strength, yield strength, elastic modulus, and percent elongation versus tempering temperature for all of the oil quenched specimens. These specimens are the simple oil quenched, the oil quenched then tempered at 300 $^oC$, and the oil quenched then tempered at 500 $^oC$. These relationships are presented in Figs. \ref{fig:q6-yield} - \ref{fig:q6-uts}.
+
+
+
+7. In your report, include micrographs of any three of the heat treatments that you were shown in the lab.
+Label the phases. Compare and contrast the resulting microstructures.
+
+
+
+
+8. Using the heat treatment micrographs from lab, describe the microstructure that is present in each case,
+stating what phases are present and in (approximately) what amounts. When possible, compare the
+relative phase amounts to what you expect from the equilibrium iron-carbon phase diagram.
+
+
+
+
+9. How does each microstructure arise from its heat treatment? Explain how material properties relate to
+these heat treatment procedures as well as the microstructures (i.e. how does processing effect
+microstructure effect properties?)
+
+
+
 
 \section{Bibliography}
 
