@@ -1,0 +1,23 @@
+[Shared Parameters]
+
+Comment,Plate Impact, 76mm support dia, 12.7mm hemispherical tup tip, 
+
+[Shared Data]
+
+Test Name,N02-CD-PMMA-0C,
+Instrument,8200,
+Operator,N02-CD,
+Date,10/28/2024 5:41:48 PM,
+
+[Step [1] Data]
+
+Specimen ID,PMMA-0C,
+Impact Height (Nominal),765.000,mm
+Total Mass,6.202,kg
+Thickness,2.780,mm
+Start Velocity,3.856,m/s
+Start Time,0.000,ms
+Total Time,8.240,ms
+Peak Force,1027.504,N
+Total Energy,6.627,J
+

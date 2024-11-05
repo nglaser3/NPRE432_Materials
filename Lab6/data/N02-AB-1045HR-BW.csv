@@ -1,0 +1,25 @@
+[Shared Parameters]
+
+Comment,Charpy Impact, 
+Span,40.000,mm
+
+[Shared Data]
+
+Test Name,N02-AB-1045HR-BW,
+Instrument,8250,
+Operator,N02-AB,
+Date,10/28/2024 5:10:28 PM,
+
+[Step [1] Data]
+
+Specimen ID,1045HR, BW, NR 0.05mm,
+Impact Height (Nominal),734.000,mm
+Total Mass,12.751,kg
+Width,6.000,mm
+Thickness,9.000,mm
+Start Velocity,3.777,m/s
+Start Time,0.000,ms
+Total Time,2.064,ms
+Peak Force,12997.954,N
+Total Energy,36.104,J
+

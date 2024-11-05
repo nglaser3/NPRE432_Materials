@@ -1,0 +1,25 @@
+[Shared Parameters]
+
+Comment,Charpy Impact, 
+Span,40.000,mm
+
+[Shared Data]
+
+Test Name,N02-CD-1045HR-0C,
+Instrument,8250,
+Operator,N02-CD,
+Date,10/28/2024 5:42:22 PM,
+
+[Step [1] Data]
+
+Specimen ID,1045HR,0C, NR 0.05mm,
+Impact Height (Nominal),736.500,mm
+Total Mass,12.751,kg
+Width,8.000,mm
+Thickness,10.000,mm
+Start Velocity,3.778,m/s
+Start Time,0.000,ms
+Total Time,0.178,ms
+Peak Force,14229.919,N
+Total Energy,4.627,J
+
