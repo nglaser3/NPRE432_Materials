@@ -65,13 +65,27 @@
 \pagenumbering{arabic}
 
 \section{Abstract}
+Heat treatment is a necessary portion of material casting, and the methodology chosen can have strong impacts on the resulting material properties. Specifically in Steel, small deviations in cooling time can have drastic changes on the resulting microstructure. We investigated the affects of heat treatment on resulting material properties of 4340 Steel. We measured the stress-strain curves of specimens that underwent 6 different heat treatments: Standard Oil Quenched, Standard Water Quenched, Annealed, Normalized, Oil Quenched then Tempered at 300 $^oC$, and Oil Quenched then Tempered at 500 $^oC$. From these stress-strain curves we determined the elastic modulus, the yield strength, the ultimate tensile strength, the toughness, and the percent elongation; and proximally found the Brinnel hardness of each sample. Further, we investigated the correlation between a materials ultimate tensile strength, yield strength, elastic modulus, or the percent elongation to the Brinnel hardness of each specimen. We found there is a strong dependence of material properties on heat treatment method utilized, often yielding drastically different properties. We found quicker cooling treatments yielded stronger materials that were more brittle, and slower treatments or treatments that were held at an elevated temperature to have much more ductility at the cost of a lower strength. Finally, we identified the causality for the difference between material properties to be the specific phase of the microstructures in the specimens, where martensite lead to poor ductility and spherodite and pearlite lead to more ductility.
 
 \section{Introduction}
-
-
+4340 Steel is one of the most commonly applicable materials in structural applications. 4340 Steel is composed of Iron, Chromium, and Carbon, and thus can have interesting material property dependence on heat treatment methodology in casting. Heat treatment methodology employed has a strong impact on resulting material properties, as the method used ultimately governs the rate of grain growth and ultimate dislocation density.
+\newpage
 \section{Experimental Methods}
+To obtain our experimental results we utilized the following methodology, appropriated from \cite{manual}. The methodology for all specimens were identical, and so the procedure described is undertaken for each specimen if not explicitly specified. We tested six total specimens: Standard Oil Quenched, Standard Water Quenched, Annealed, Normalized, Oil Quenched then Tempered at 300 $^oC$, and Oil Quenched then Tempered at 500 $^oC$. 
 
+To begin the experiment, the specimens were in a hot furnace. The specimens were then removed from the furnace and underwent their respective heat treatment:
+\begin{itemize}
+     \item Standard Oil Quenched --- Dunked in oil 
+     \item Standard Water Quenched --- Dunked in water
+     \item Annealed --- Not done by us
+     \item Normalized --- Not done by us 
+     \item Oil Quenched then Tempered at 300 $^oC$ --- Dunked in oil then held at 300 $^oC$
+     \item Oil Quenched then Tempered at 500 $^oC$ --- Dunked in oil then held at 500 $^oC$
+\end{itemize}
 
+Next, each specimen was cleaned and then polished to remove external impurities. We measured the initial diameter of the gage, and the hardness of the grip. Then each specimen was loaded into the Tensile Tester, and a trial was ran. To run each trial we loaded the specimen, got the force to be less than 0.5 $MPa$, and then zeroed the strain. After fracture, we measured the resulting gage diameter. 
+
+\newpage
 \section{Theoretical Models}
 To begin, we measured the force applied to a specimen and the resulting strain. To convert these force values to stress, we utilized the following equation:
 
@@ -102,7 +116,7 @@ To begin, we found the engineering stress-strain curves for oil quenched, water 
 
 \begin{figure}[!h!]
     \centering
-    \includegraphics[width=0.5\linewidth]{Lab5/plots/q1_adjusted.png}
+    \includegraphics[width=0.5\linewidth]{plots/q1_adjusted.png}
     \caption{Engineering Stress-Strain curves of select materials}
     \label{fig:q1-all}
 \end{figure}
@@ -172,6 +186,7 @@ Next, from these tabulated values we can determine a correlation between the  th
 \end{minipage}
 \end{figure}
 \newpage
+
 \section{Analysis of Discussion and Results}
 To begin, our true-uncorrected data is rather lugubrious. This is due to mal-practice in loading of specimens, and so many of our trials either began with negative strains or started at 0 and then went negative prior to going positive. To amend these poor results, we chopped off the objectively incorrect data points that were obviously produced from incorrect loading, and then performed our data processing on the resulting datasets. For example, our normalized stress strain curve:
 
@@ -187,41 +202,62 @@ To fix this data set, we chopped the initial loading phase from the data set, re
 To continue, another strong source of error was in finding the Brinnel hardness of the annealed sample. This is due to the invalidity of application of the equation we utilized to convert between Rockwell C and Brinnel for this specimen. Similarly, when determining the toughness of the water quenched sample, because our mechanism in determining yield strength resulted in equivalent fracture point and yield strengths, the numerical integration was invalid. To obtain a non-zero value we integrated from 0 to the fracture point. We recognize this is invalid. 
 
 
+\newpage
 \section{Answer to Questions}
+\subsection*{Question 1}
 To begin, we found and plotted the engineering stress-strain curves of various heat treatment methods enacted upon 4340 specimens. We investigated basic water quenched, basic oil quenched, annealed, normalized, oil quenched then tempered at 300 $^oC$, and oil quenched then tempered at 500 $^oC$. These curves are presented in Fig. \ref{fig:q1-all}.
 
+\subsection*{Question 2}
 Next, we found the elastic modulus, yield strength, ultimate tensile strength, toughness, percent elongation, and brinnel hardness of each aforementioned specimen. These values are tabulated in Tab. \ref{tab:q2}. Various results stand out, namely the yield strength of the water quenched specimen and the hardness of the annealed specimen. For the water quenched specimen, unfortunately when utilizing the 0.2\% offset method to determine the yield strength, the offset linear line never intercepted with the stress-strain curve as the specimen failed prior to significant plastic deformation. Further, the Brinnel hardness value for the Annealed specimen is absurdly high. This is due to the Rockwell hardness being very large ---- 87.9 ---- and outside of the range of validity of our empirically derived conversion equation, Eq. \ref{eq:rc2br}.
 
+\subsection*{Question 3}
 Noticeably, the material properties for each specimen are starkly different despite all being 4340. This is due to the affect that heating and cooling have on the microstructure of materials. In 4340, the faster the specimen is cooled the more martensite is present, and the more brittle the specimen is. The strongest specimen, by far, was the standard oil quenched specimen. The hardest was the annealed specimen. The stiffest was the water quenched whereas the most ductile was the annealed specimen. Finally, the toughest was the oil quenched then tempered at 300 $^oC$.
 
+\subsection*{Question 4}
 We determined the relationship between the ultimate tensile strength and the Brinnel hardness of each specimen, presented in Fig. \ref{fig:q4}. Our linear regression yielded a less than optimal correlation ---- only 0.588. Despite the poor fit, we do expect an inverse relationship between hardness and ultimate strength. We expect this as the harder a material is, the tougher we expect, and thus the less ductile. This is a gross over-simplification on the relationship between hardness and strength, but is sufficient for comparison's sake. 
 
+\subsection*{Question 5}
 The heat treatment that results in potential surface flaws is water quenching. This is due to the rapidity in cooling due to the high thermal conductivity of water. This rapid cooling is so strong and fast that it exerts huge thermal stresses upon the specimen, where portions of the surface experience rapid thermal de-expansion, potentially yielding cracks that can propagate through the material during tensile load. In fact, this was present in our water quenched specimen, where the specimen failed prior to non-negligible plastic deformation. 
 
+\subsection*{Question 6}
 Next, we determined the relationships between ultimate strength, yield strength, elastic modulus, and percent elongation versus tempering temperature for all of the oil quenched specimens. These specimens are the simple oil quenched, the oil quenched then tempered at 300 $^oC$, and the oil quenched then tempered at 500 $^oC$. These relationships are presented in Figs. \ref{fig:q6-yield} - \ref{fig:q6-uts}.
 
 
+\subsection*{Question 7}
+To begin to compare the microstructure of three cooling methods, the microstructure are presented below. Fig. \ref{fig:an} is the annealed specimen, thus the small dark globules are pearlite, and the smaller circular globules are spherodite. Fig. \ref{fig:wq} is the water quenched specimen, and the vast majority of the structure is martensite. Finally, Fig. \ref{fig:nm} is the normalized specimen, where the dark globules are pearlite and the light globules are ferrite. To compare these microstructures, we will analyze the resulting material properties. Firstly, martensite will have relatively poor ductility, due to the high dislocation density from a large quantity of grain boundaries. On the contrary, the annealed specimen has high uniformity and thus low relative dislocation density and high ductility. in the middle however reside the normalized specimen, where there is a high quantity of two different phases, but low mixing. Because of this combination, the normalized steel will have better ductility than the water quenched, but worse than the annealed; and conversely more strength than the annealed but less than the water quenched.  
+\newpage
+\begin{figure}[!h!]
+    \centering
+    \includegraphics[width=0.5\linewidth]{plots/microA.jpg}
+    \caption{Annealed Specimen}
+    \label{fig:an}
+\end{figure}
+\begin{figure}[!h!]
+    \centering
+    \includegraphics[width=0.5\linewidth]{plots/microB.jpg}
+    \caption{Water Quenched Specimen}
+    \label{fig:wq}
+\end{figure}
+\begin{figure}[!h!]
+    \centering
+    \includegraphics[width=0.5\linewidth]{plots/microC.jpg}
+    \caption{Normalized Specimen}
+    \label{fig:nm}
+\end{figure}
 
-7. In your report, include micrographs of any three of the heat treatments that you were shown in the lab.
-Label the phases. Compare and contrast the resulting microstructures.
+\newpage
+\subsection*{Question 8}
+To begin, for the Annealed specimen we can see the formation of both pearlite and spherodite. Due to the prominence of the spherodite phase, we can assume the specimen austenitized. To satisfy all of these conditions the steel must be between 0.77\% and 4.3\% carbon, and additionally due to the strong prominence of spherodite we can assume the carbon content is higher than 2.1\% carbon. Next, the normalized specimen. We observe prominence of both ferrite and pearlite. Due to the presence of ferrite, the carbon content must be below .83\% carbon, however due to the strong prominence of this phase there must be more than 0.5\% carbon. Finally, the water quenched specimen. This specimen is entirely martensite, and thus must be between 0.2\% and 0.65\% carbon content \cite{lab5paper}. 
 
 
 
+\subsection*{Question 9}
+Different microstructures arise from varying heat treatments because the formation of grains and their size are strongly dependent on the rate of thermal energy removal from the specimen. This is due to dislocations, such as grain boundaries, being structural defects and, given enough energy, can rectify themselves. Excess thermal energy being supplied to the system increases the rate in which these defects rectify themselves, and thus one could presume that slowly cooling a specimen or holding a specimen at a high solid temperature would result in a low dislocation density (low quantity of grains), and conversely rapid cooling yields large quantities of grains and dislocations. The material properties of steel are partially a result of the structure of a perfectly mixed steel sample aswell as the dislocations interacting with each other and external forces. For example, the higher the dislocation density normal to the direction of applied load, the more resistive the material will be to that load. This is simply due to the sheer number of shearing forces needed to cause slip. 
+\newpage
 
-8. Using the heat treatment micrographs from lab, describe the microstructure that is present in each case,
-stating what phases are present and in (approximately) what amounts. When possible, compare the
-relative phase amounts to what you expect from the equilibrium iron-carbon phase diagram.
-
-
-
-
-9. How does each microstructure arise from its heat treatment? Explain how material properties relate to
-these heat treatment procedures as well as the microstructures (i.e. how does processing effect
-microstructure effect properties?)
-
-
-
+\section{Conclusions}
+In conclusion, we found a strong causality correlation between material properties and heat treatment method utilized, often yielding drastically different properties. We found quicker cooling treatments yielded stronger materials that were more brittle, and slower treatments or treatments that were held at an elevated temperature to have much more ductility at the cost of a lower strength. Finally, we identified the causality for the difference between material properties to be the specific phase of the microstructures in the specimens, where martensite lead to poor ductility and spherodite and pearlite lead to more ductility.
 
 \section{Bibliography}
-
+\printbibliography[heading=none]
 \end{document}
