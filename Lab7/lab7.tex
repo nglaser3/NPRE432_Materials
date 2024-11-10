@@ -1,0 +1,87 @@
+\documentclass{article}
+\usepackage{csquotes}
+% Language setting
+% Replace `english' with e.g. `spanish' to change the document language
+\usepackage[backend=bibtex,bibencoding=ascii]{biblatex} %Imports biblatex package
+\addbibresource{refs.bib}
+
+\usepackage{enumitem}
+\usepackage[english]{babel}
+\usepackage{array}
+\usepackage{amsmath}
+\usepackage{pythonhighlight}
+\usepackage{multirow}
+\newcolumntype{P}[1]{>{\centering\arraybackslash}p{#1}}
+\newcolumntype{M}[1]{>{\centering\arraybackslash}m{#1}}
+
+% Set page size and margins
+% Replace `letterpaper' with `a4paper' for UK/EU standard size
+\usepackage[letterpaper,top=2cm,bottom=2cm,left=3cm,right=3cm,marginparwidth=1.75cm]{geometry}
+
+\usepackage{amsmath}
+\usepackage{graphicx}
+\usepackage{caption}
+\usepackage{subcaption}
+\usepackage[colorlinks=true, allcolors=blue]{hyperref}
+\usepackage{setspace}
+\usepackage{booktabs}
+\usepackage[T1]{fontenc}
+\usepackage{longtable}
+\doublespacing
+
+\begin{document}
+\newcommand{\Fig}[3]{\begin{figure}[!h!]\centering\includegraphics[width=0.5\linewidth]{#1}\caption{#2}\label{#3}\end{figure}}
+\begin{titlepage}
+
+\centering
+\scshape
+
+
+%
+\rule{\textwidth}{1.6pt}\vspace*{-\baselineskip}\vspace*{2pt}
+\rule{\textwidth}{0.4pt}
+
+{\Huge \textbf{\textsc{ Welding and Allied Processes \\
+\vspace{15pt}}}}
+
+\rule{\textwidth}{0.4pt}\vspace*{-\baselineskip}\vspace{3pt}
+\rule{\textwidth}{1.6pt}\vspace{6pt}
+\centerline{\textit{University of Illinois at Urbana-Champaign}} 
+\centerline{\textit{Department of Nuclear, Plasma, and Radiological Engineering}}
+\vspace{1.5\baselineskip}
+
+
+\large \centerline{\textbf{Author:} Nathan Glaser}
+\large \centerline{\textbf{Net-ID:} nglaser3}
+\quad
+\large \centerline{November 13, 2024}
+
+\vfill{}
+\includegraphics[width=0.8\textwidth]{./illinois.eps}\\[1cm]
+%
+\pagenumbering{gobble}
+\end{titlepage}
+
+\tableofcontents
+\newpage
+\pagenumbering{arabic}
+
+\section{Abstract}
+
+\section{Introduction}
+
+\section{Experimental Methods}
+
+\section{Theoretical Models}
+
+\section{Results}
+To begin, 
+\section{Analysis and Discussion of Results}
+
+\section{Answers to Questions}
+
+\section{Conclusions}
+
+\section{References}
+
+\end{document}
