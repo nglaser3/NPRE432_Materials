@@ -72,10 +72,99 @@
 
 \section{Experimental Methods}
 
-\section{Theoretical Models}
+This section we will discuss the experimental methods utilized to obtain our experimental results. The methods presented here are adopted from \cite{manual}. The steps we followed to investigated the tensile properties of welded materials were:
+\begin{enumerate}
+    \item Measure the width of each specimen at the weld and at the base material. Then, measure the specimen thickness. This thickness should be constant along the entire specimen. 
+    \item Mount the specimen into the Instron tension tester. 
+    \item Run the tension test, ensuring the initial applied force is less than 0.5 kN.
+    \item After the specimen fractures, investigate the fracture point for anny irregularities and record these irregularities as well as the fracture type. 
+\end{enumerate}
 
+Last, to determine the hardness values of the welded materials we utilized a video measurement system to measure the the diameter of each indentation, and recorded each diameter as a function of its position.
+
+\newpage
+\section{Theoretical Models}
+To begin the discussion of the theoretical models we utilized in this laboratory, the engineering strain and stress. The engineering stress is a quantity which measures the unit elongation or compression of the specimen under load. There are two standard variants of engineering strain, mm/mm or \%. The \% variation is simply 100 multiplied by the  mm/mm variation. The mm/mm variant is defined as
+
+\begin{equation}
+    \epsilon_e = \frac{L}{L_0}
+\end{equation}
+
+where $L$ is the length of the specimen along the tensile/compressive  axis, and $L_0$ is the initial length along that axis. Proximally, the engineering stress is a quantity which measures the external pressure applied to the specimen along the tensile/compressive axis. This is typically reported in MPa, and is defined as
+
+\begin{equation}
+    \sigma_{e} = \frac{F}{A_{0}}
+\end{equation}
+
+such that $F$ is the external force applied to the specimen, and $A_0$ is the initial area of the specimen. Specifically, $A_0$ is the cross-sectional area of the weakest portion of the specimen. 
+
+Tangentially, from the resultant stress-strain curve utilizing the aforementioned information, various material properties can be gleaned. First, and most definitely the easiest to determine, is the Ultimate Tensile Strength (UTS) of a material. To determine the UTS, one simply finds the peak engineering stress applied to the specimen. Secondarily, the yield strength is the transitionary stress which induces plastic deformation unto the specimen. This is found in various ways, most commonly utilizing the 0.2\% offset method. Using this method, the elastic modulus if determined, then a line is drawn with a slope of the elastic modulus and an x-intercept of 0.2\% strain or 0.002 mm/mm strain. Then the yield strength is simply defined as the intercept of this line with the stress-strain curve. 
+
+Finally, an important quantity when investigating the strength of materials under tension/compression is the hardness. There are various scales used to define hardness. The Vickers scale in particular utilizes a spherical indenter to forcibly indent a circular impression into the tested material. Typically this spherical indenter is made of Tungsten for its high strength. The Vickers hardness is found via investigation of the indentation left behind, and is defined as
+
+\begin{equation}
+    VHN = \frac{1.85M}{d^2}
+\end{equation}
+
+Where $M$ is the mass of the indenter and d is the average diameter of the circular impression left behind. 
+
+\newpage
 \section{Results}
-To begin, 
+To begin, we found the load-displacement curves of all weld types for both 1018 Steel and 6061 Aluminum. These are presented in Fig. \ref{fig:q1}. 
+
+\begin{figure}[!hp!]
+    \centering
+    \includegraphics[width=\linewidth]{plots/q1-1018-6061.png}
+    \caption{Load-Displacement curves of 1018 Steel (Left) and 6061 Aluminum (Right)}
+    \label{fig:q1}
+\end{figure}
+
+We determined the strongest weld type to be Chamfer for both material types. Thus, we formed the stress-strain curve for this weld type for both materials. This is presented in Fig. \ref{fig:q2weld}. Proximally we constructed stress-strain curves for homogeneous non-welded 1018 Steel and 6061 Aluminum. These are presented in Fig. \ref{fig:q2norm}.
+\begin{figure}[!hp!]
+\begin{subfigure}{.5\textwidth}
+    \centering
+    \includegraphics[width=\linewidth]{plots/q2weld.png}
+    \caption{Stress-Strain Curves for Chamfer welded 1018 \newline \quad and 6061 specimens}
+    \label{fig:q2weld}
+\end{subfigure}
+\begin{subfigure}{.5\textwidth}
+    \centering
+    \includegraphics[width=\linewidth]{plots/q2norm.png}
+    \caption{Stress-Strain Curves for 1018 and 6061  \newline \quad homogeneous specimens}
+    \label{fig:q2norm}
+\end{subfigure}
+\end{figure}
+
+\newpage
+Further, from these curves we found the yield strength and ultimate tensile strength of each specimen. To determine the yield strength (UTS) we utilized the 0.2\% offset method. The results are presented in Tab. \ref{tab:q2lab7}
+
+\begin{table}[!hp!]
+    \centering
+    \caption{Yield Strength and UTS of welded and homogeneous 1018 and 6061 specimens}
+    \begin{tabular}{|c|c|c|c|c|}
+        \toprule
+        \bottomrule
+        Material & 1018 Chamfer & 6061 Chamfer & 1018 Homogeneous & 6061 Homogeneous \\
+        \toprule
+        \bottomrule
+        Yield Strength & 145.204 & 39.908 & 671.854 & 293.534 \\
+        \hline
+        UTS & 146.3 & 523.18 & 695.849 & 317.578 \\
+        \hline
+    \end{tabular}
+    \label{tab:q2lab7}
+\end{table}
+
+Finally, we determined the Vickers hardness for the tested 1018 and 6061 specimens. We found the Vickers hardness as a function of the testing site, presented in Fig. \ref{fig:q4}. Each of the sub-plots has two vertical lines. To the left of the vertical lines is the base-metal region, between the lines is the heat effected region, and to the right is the fusion zone. Note, both plots have a 'Spline Interpolator', this is purely to aid in visualization of the overall trend of the data. Without these curves, the data is hard to visualize.  
+
+\begin{figure}[!hp!]
+    \centering
+    \includegraphics[width=\linewidth]{plots/q4.png}
+    \caption{Vickers hardness for 6061 (Left) and 1018 (Right)}
+    \label{fig:q4}
+\end{figure}
+
+\newpage
 \section{Analysis and Discussion of Results}
 
 \section{Answers to Questions}
@@ -83,5 +172,7 @@ To begin,
 \section{Conclusions}
 
 \section{References}
+
+\printbibliography[heading = none]
 
 \end{document}
